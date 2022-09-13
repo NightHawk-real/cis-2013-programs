@@ -6,7 +6,7 @@ var floatAge, floatDays, floatMonths, intFortnights, intWeeks;
     intWeeks = floatDays / 7;
     alert("Age = " + floatAge);
     alert("Age in months = " + floatMonths);
-    alert("Age in fortnights =" + intFortnights);
+    alert("Age in fortnights = " + intFortnights);
     alert("Age in weeks = " + intWeeks);
     alert("Age in days = " + floatDays);
 
