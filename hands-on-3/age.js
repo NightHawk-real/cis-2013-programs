@@ -4,6 +4,5 @@ var floatAge, floatDays, floatMonths, intFortnights, intWeeks;
     floatMonths = floatAge * 12;
     intFortnights = floatDays / 14;
     intWeeks = floatDays / 7;
-    alert(`Age in years = ${floatAge}\n Age in months = ${floatMonths}\n Age in fortnights = ${intFortnights}\n Age in weeks = ${intWeeks}\n Age in days = ${floatDays}`);
-
-
+    alert(`Age in years = ${floatAge}\nAge in months = ${floatMonths}\nAge in fortnights = ${intFortnights}\nAge in weeks = ${intWeeks}\nAge in days = ${floatDays}`);
+// I'm not really sure how that code works above, might redo it with `dwada` + \n `dwadad` format
