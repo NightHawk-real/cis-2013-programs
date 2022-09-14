@@ -9,5 +9,5 @@ var floatAge, floatDays, floatMonths, intFortnights, intWeeks;
     alert("Age in fortnights = " + intFortnights);
     alert("Age in weeks = " + intWeeks);
     alert("Age in days = " + floatDays);
-    alert("this is a test");
+    alert("this is a test\nNew Line hopefully?");
 
