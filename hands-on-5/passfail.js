@@ -23,11 +23,11 @@ if (intGradeOption === 1)
 {
     if(floatTotalPts >= 80) 
     {
-        stringFinalGrade = "pass";
+        stringFinalGrade = "Pass";
     }
         else 
         {
-            stringFinalGrade = "fail";
+            stringFinalGrade = "Fail";
         }
     } 
 else  
