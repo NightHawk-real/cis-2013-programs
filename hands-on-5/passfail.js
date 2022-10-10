@@ -25,7 +25,8 @@ if (intGradeOption === 1)
     {
         stringFinalGrade = "pass"
     }
-        else () {
+        else () 
+        {
             stringFinalGrade = "fail"
         }
 
