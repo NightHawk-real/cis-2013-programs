@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title>CIS 2013 Final Grade Calculator</title>
+    <script src="passfailDOM.js"></script>
+</head>
+
+<body>
+	<div id="content">
+		<h1>CIS 2013 Final Class Grade Calculator</h1>
+		<p>
+			Enter your grades below and click "Calculate" for your final grade.
+		</p>
+
+		<label for="hw_pts">Homework Points:  $</label>
+		<input type="text" id="hw_pts" />
+		<br />
+
+		<label for="midterm_points">Mid-Term Exam Points: $</label>
+		<input type="text" id="midterm_points" />
+		<br />
+
+        <label for="fin_pts">Final Exam Points: $</label>
+        <input type="text" id="fin_pts" />
+        <br />
+        
+        <label>&nbsp;</label>
+		<input type="button" id="calc" value="Calculate" />
+		<br />
+
+		<label for="final_points">Total Loan Cost:  $</label>
+		<input type="text" id="final_points" disabled="disabled" />
+		<br><br>
+	</div>
+</body>
+</html>
