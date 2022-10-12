@@ -72,18 +72,22 @@ function limiter(hw_pts) {
     if ($("hw_pts").value < 0) $("hw_pts").value = 0;
     if ($("hw_pts").value > 30) $("hw_pts").value = 30;
 }
+
 function limiter(midterm_pts) {
     if ($("midterm_pts").value < 0) $("midterm_pts").value = 0;
     if ($("midterm_pts").value > 35) $("midterm_pts").value = 35;
 }
+
 function limiter(fin_pts) {
     if ($("fin_pts").value < 0) $("fin_pts").value = 0;
     if ($("fin_pts").value > 35) $("fin_pts").value = 35;
 }
+
 function limiter(grade_option) {
     if ($("grade_option").value < 1) $("grade_option").value = 1;
     if ($("grade_option").value > 2) $("grade_option").value = 2;
 }
+
 window.onload = function () 
 {
     $("hw_pts").value = "";
