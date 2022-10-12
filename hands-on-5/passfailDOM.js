@@ -68,13 +68,22 @@ $("final_grade").value = stringFinalGrade;
 
 }
 
-function limiter(limit) {
+function limiter(hw_pts) {
     if ($("hw_pts").value < 0) $("hw_pts").value = 0;
     if ($("hw_pts").value > 30) $("hw_pts").value = 30;
+}
+
+function limiter2(midterm_pts) {
     if ($("midterm_pts").value < 0) $("midterm_pts").value = 0;
     if ($("midterm_pts").value > 35) $("midterm_pts").value = 35;
+}
+
+function limiter3(fin_pts) {
     if ($("fin_pts").value < 0) $("fin_pts").value = 0;
     if ($("fin_pts").value > 35) $("fin_pts").value = 35;
+}
+
+function limiter4(grade_option) {
     if ($("grade_option").value < 1) $("grade_option").value = 1;
     if ($("grade_option").value > 2) $("grade_option").value = 2;
 }   
