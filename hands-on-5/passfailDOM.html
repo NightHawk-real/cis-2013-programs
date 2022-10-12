@@ -19,15 +19,15 @@
 		<br />
 
 		<label for="midterm_pts">Midterm Pts:</label>
-		<input type="text" id="midterm_pts" />
+		<input type="text" id="midterm_pts" onchange="limiter(midterm_pts);"/>
 		<br />
 
 		<label for="fin_pts">Final Pts:</label>
-		<input type="text" id="fin_pts" />
+		<input type="text" id="fin_pts" onchange="limiter(fin_pts);"/>
 		<br /><br />
 
 		<label for="grade_option">Enter 1 for audit, 2 for letter grade</label>
-		<input type="text" id="grade_option" />
+		<input type="text" id="grade_option" onchange="limiter(grade_option);"/>
 		<br /><br />
 
 		<label>&nbsp;</label>
