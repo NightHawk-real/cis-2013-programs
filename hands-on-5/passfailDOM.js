@@ -15,15 +15,11 @@ var calculate = function()
 {
    var intGradeOption, floatTotalPts, floatHwPts, floatMidPts, floatFinPts, stringFinalGrade
    floatHwPts = parseFloat($("hw_pts").value);
-   floatMidPts = parseFloat($("midterm_points").value);
+   floatMidPts = parseFloat($("midterm_pts").value);
    floatFinPts = parseFloat($("fin_pts").value);
    floatTotalPts = parseFloat(floatHwPts + floatMidPts + floatFinPts);
-   $("final_points").value = floatTotalPts;
+   intGradeOption = parseInt($("grade_option").value);
 }
-
-floatTotalPts = floatHwPts + floatMidPts + floatFinPts;
-
-intGradeOption = parseInt(prompt("Please enter your choice of audit pass/fail or letter grade (1 or 2)"));
 
 if (intGradeOption === 1)
 {
@@ -68,6 +64,8 @@ else
                 }
             }
 }
+
+$("final_grade").value = stringFinalGrade
 
 window.onload = function () 
 {
