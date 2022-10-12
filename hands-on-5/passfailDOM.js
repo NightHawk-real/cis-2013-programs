@@ -68,6 +68,10 @@ $("final_grade").value = stringFinalGrade;
 
 }
 
+function limiter() {
+    if ($("hw_pts").value < 0) $("hw_pts").value = 0;
+    if ($("hw_pts").value > 100) $("hw_pts").value = 100;
+}
 window.onload = function () 
 {
     $("hw_pts").value = "";
