@@ -19,7 +19,6 @@ var calculate = function()
    floatFinPts = parseFloat($("fin_pts").value);
    floatTotalPts = parseFloat(floatHwPts + floatMidPts + floatFinPts);
    intGradeOption = parseInt($("grade_option").value);
-}
 
 if (intGradeOption === 1)
 {
@@ -65,13 +64,15 @@ else
             }
 }
 
-$("final_grade").value = stringFinalGrade;
+$("final_grade").value = stringFinalGrade; 
+
+}
 
 window.onload = function () 
 {
     $("hw_pts").value = "";
     $("midterm_points").value = "";
-    $("fin_points").value = "";
-    $("calc").onclick = calculate;
+    $("fin_pts").value = "";
+    $("calculate").onclick = calculate;
     $("hw_pts").focus();
 }
