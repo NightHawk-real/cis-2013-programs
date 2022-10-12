@@ -68,7 +68,7 @@ $("final_grade").value = stringFinalGrade;
 
 }
 
-function limiter() {
+function limiter(hw_pts) {
     if ($("hw_pts").value < 0) $("hw_pts").value = 0;
     if ($("hw_pts").value > 100) $("hw_pts").value = 100;
 }
