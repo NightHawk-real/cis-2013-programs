@@ -65,7 +65,7 @@ else
             }
 }
 
-$("final_grade").value = stringFinalGrade
+$("final_grade").value = stringFinalGrade;
 
 window.onload = function () 
 {
