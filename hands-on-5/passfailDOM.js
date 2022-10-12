@@ -81,8 +81,8 @@ function limiter(fin_pts) {
     if ($("fin_pts").value > 35) $("fin_pts").value = 35;
 }
 function limiter(grade_option) {
-    if ($("fin_pts").value < 1) $("fin_pts").value = 1;
-    if ($("fin_pts").value > 2) $("fin_pts").value = 2;
+    if ($("grade_option").value < 1) $("grade_option").value = 1;
+    if ($("grade_option").value > 2) $("grade_option").value = 2;
 }
 window.onload = function () 
 {
