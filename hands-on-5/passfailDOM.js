@@ -71,7 +71,7 @@ $("final_grade").value = stringFinalGrade;
 window.onload = function () 
 {
     $("hw_pts").value = "";
-    $("midterm_points").value = "";
+    $("midterm_pts").value = "";
     $("fin_pts").value = "";
     $("calculate").onclick = calculate;
     $("hw_pts").focus();
