@@ -45,20 +45,20 @@ switch (true) {
             break;
     
     case boolprinting === false && boolRedLight === true && boolRecognised === true:
-        stringOutput = stringmessage_;
+        stringOutput = stringMessage3 + "\n" + stringMessage4;
             break;
 
     case boolprinting === false && boolRedLight === true && boolRecognised === false:
-        stringOutput = stringmessage_;
+        stringOutput = stringMessage4;
             break;
 
     case boolprinting === false && boolRedLight === false && boolRecognised === true:
-        stringOutput = stringmessage_;
+        stringOutput = stringMessage3;
             break;
     
      default:
     
-        stringOutput = stringmessage_;
+        stringOutput = stringMessage6;
     
         break;
     }
