@@ -6,12 +6,12 @@ var fixPrinter = function() {
     var stringOutput = "";  //declares stringOutput inital value to be blank
 
     //define the individual troubleshooting tips per the chart
-    var stringMessage1 = "Check the power cable.";
-    var stringMessage2 = "Check the printer-computer cable.";
-    var stringMessage3 = "Ensure printer software is installed.";
-    var stringMessage4 = "Check / replace ink.";
-    var stringMessage5 = "Check for paper jam.";
-    var stringMessage6 = "Looks like everything is working fine!";
+    var stringMessage1 = "Check the power cable. ";
+    var stringMessage2 = "Check the printer-computer cable. ";
+    var stringMessage3 = "Ensure printer software is installed. ";
+    var stringMessage4 = "Check / replace ink. ";
+    var stringMessage5 = "Check for paper jam. ";
+    var stringMessage6 = "Looks like everything is working fine! ";
 
     /* Need to be careful here when defining our boolean variables for use in the troubleshooting chart
      * and what you define as true or false.  For example, in the chart used in this problem,
@@ -27,37 +27,40 @@ var fixPrinter = function() {
     ​
 
 switch (true) {
-    ​
-    case boolprinting === true && boolRedLight === true && boolRecognised === true:​
-        stringOutput = stringMessage2 + “\n” + stringMessage3 + “\n” + stringMessage4;​
-            break;​
 
-    case boolprinting === true && boolRedLight === true && boolRecognised === false:​
-        stringOutput = ​
-            break;​
+    case boolprinting === true && boolRedLight === true && boolRecognised === true:
+        stringOutput = stringMessage2 + "\n" + stringMessage3 + "\n" + stringMessage4;
+            break;
+
+    case boolprinting === true && boolRedLight === true && boolRecognised === false:
+        stringOutput = stringMessage4 + "\n" + stringMessage5;
+            break;
     
-      case boolprinting === && boolRedLight === && boolRecognised === :​
-        stringOutput = stringmessage_;​
-        break;​
-      case boolprinting === && boolRedLight === && boolRecognised === :​
-        stringOutput = stringmessage_;​
-        break;​
+    case boolprinting === true && boolRedLight === false && boolRecognised === true:
+        stringOutput = stringMessage1 + "\n" + stringMessage2 + "\n" + stringMessage3;
+            break;
+
+    case boolprinting === true && boolRedLight === false && boolRecognised === false:
+        stringOutput = stringMessage5;
+            break;
     
-      case boolprinting === && boolRedLight === && boolRecognised === :​
-        stringOutput = stringmessage_;​
-        break;​
-      case boolprinting === && boolRedLight === && boolRecognised === :​
-        stringOutput = stringmessage_;​
-        break;​
-    case boolprinting === && boolRedLight === && boolRecognised === :​
-        stringOutput = stringmessage_;​
-        break;​
+    case boolprinting === false && boolRedLight === true && boolRecognised === true:
+        stringOutput = stringmessage_;
+            break;
+
+    case boolprinting === false && boolRedLight === true && boolRecognised === false:
+        stringOutput = stringmessage_;
+            break;
+
+    case boolprinting === false && boolRedLight === false && boolRecognised === true:
+        stringOutput = stringmessage_;
+            break;
     
-     default:​
+     default:
     
-        stringOutput = stringmessage_;​
+        stringOutput = stringmessage_;
     
-        break;​
+        break;
     }
 $("output").value = stringOutput;
 

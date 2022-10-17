@@ -36,8 +36,8 @@ else
     {
         stringFinalGrade = "A";
     }
-        else
-            {
+    else
+        {
                 if(floatTotalPts >= 80 && floatTotalPts < 90) 
                 {
                     stringFinalGrade = "B";
@@ -60,6 +60,6 @@ else
                             }
                         }
                 }
-            }
+        }
 }
 alert("Your final grade is: " + stringFinalGrade);
