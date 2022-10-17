@@ -16,7 +16,7 @@ var calculate = function()
    var intGradeOption, floatTotalPts, floatHwPts, floatMidPts, floatFinPts, stringFinalGrade
    floatHwPts = parseFloat($("hw_pts").value);
    floatMidPts = parseFloat($("midterm_pts").value);
-   floatFinPts = parseFloat($("fin_pts").value);
+   floatFinPts = parseFloat($("fin_pts").value);                      // changed some of the variable names from the original source code
    floatTotalPts = parseFloat(floatHwPts + floatMidPts + floatFinPts);
    intGradeOption = parseInt($("grade_option").value);
 
@@ -68,8 +68,8 @@ $("final_grade").value = stringFinalGrade;
 
 }
 
-function limiter(hw_pts) {
-    if ($("hw_pts").value < 0) $("hw_pts").value = 0;
+function limiter(hw_pts) {                                  //Added a limiter function to each input to prevent students from entering values over the possible amount of points for each section
+    if ($("hw_pts").value < 0) $("hw_pts").value = 0;              
     if ($("hw_pts").value > 30) $("hw_pts").value = 30;
 }
 
