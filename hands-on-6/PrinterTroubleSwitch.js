@@ -1,6 +1,6 @@
 var $ = function (id) {
     return document.getElementById(id);
-}
+};
 
 var fixPrinter = function() {
     var stringOutput = "";  //declares stringOutput inital value to be blank
@@ -27,44 +27,43 @@ var fixPrinter = function() {
 
 switch (true) {
 
-    case boolprinting === true && boolRedLight === true && boolRecognised === true:
+    case boolPrinting === true && boolRedLight === true && boolRecognised === true:
         stringOutput = stringMessage2 + "\n" + stringMessage3 + "\n" + stringMessage4;
             break;
 
-    case boolprinting === true && boolRedLight === true && boolRecognised === false:
+    case boolPrinting === true && boolRedLight === true && boolRecognised === false:
         stringOutput = stringMessage4 + "\n" + stringMessage5;
             break;
     
-    case boolprinting === true && boolRedLight === false && boolRecognised === true:
+    case boolPrinting === true && boolRedLight === false && boolRecognised === true:
         stringOutput = stringMessage1 + "\n" + stringMessage2 + "\n" + stringMessage3;
             break;
 
-    case boolprinting === true && boolRedLight === false && boolRecognised === false:
+    case boolPrinting === true && boolRedLight === false && boolRecognised === false:
         stringOutput = stringMessage5;
             break;
     
-    case boolprinting === false && boolRedLight === true && boolRecognised === true:
+    case boolPrinting === false && boolRedLight === true && boolRecognised === true:
         stringOutput = stringMessage3 + "\n" + stringMessage4;
             break;
 
-    case boolprinting === false && boolRedLight === true && boolRecognised === false:
+    case boolPrinting === false && boolRedLight === true && boolRecognised === false:
         stringOutput = stringMessage4;
             break;
 
-    case boolprinting === false && boolRedLight === false && boolRecognised === true:
+    case boolPrinting === false && boolRedLight === false && boolRecognised === true:
         stringOutput = stringMessage3;
             break;
     
-     default:
-    
+    default:
         stringOutput = stringMessage6;
-
         break;
-    }
+}
+
 $("output").value = stringOutput;
 
-}
+};
 
 window.onload = function () {
     $("troubleshoot").onclick = fixPrinter;
-}
+};
