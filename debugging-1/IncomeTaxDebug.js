@@ -25,8 +25,9 @@ var calculateIncome = function ()
     		else
     		{
     			floatTaxRate = .20;
-    	}
-    } 
+    	    }
+        } 
+    }
     else
     {
     	{
