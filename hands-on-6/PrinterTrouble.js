@@ -31,7 +31,7 @@ if (boolPrinting === true) { //boolPrinting = true is when the printer does NOT 
 
         if (boolRecognised === true) { //boolRecognised = true when the printer is NOT recognized
 
-            stringOutput = stringMessage2 + stringMessage3 + stringMessage4;
+            stringOutput = stringMessage2 + "\n" + stringMessage3 + "\n" + stringMessage4;
 
         }
         else {
