@@ -6,12 +6,12 @@ var fixPrinter = function() {
     var stringOutput = "";  //declares stringOutput inital value to be blank
 
     //define the individual troubleshooting tips per the chart
-    var stringMessage1 = "Check the power cable.";
-    var stringMessage2 = "Check the printer-computer cable.";
-    var stringMessage3 = "Ensure printer software is installed.";
-    var stringMessage4 = "Check / replace ink.";
-    var stringMessage5 = "Check for paper jam.";
-    var stringMessage6 = "Looks like everything is working fine!";
+    var stringMessage1 = "Check the power cable. ";
+    var stringMessage2 = "Check the printer-computer cable. ";
+    var stringMessage3 = "Ensure printer software is installed. ";
+    var stringMessage4 = "Check / replace ink. ";
+    var stringMessage5 = "Check for paper jam. ";
+    var stringMessage6 = "Looks like everything is working fine! ";
 
     /* Need to be careful here when defining our boolean variables for use in the troubleshooting chart
      * and what you define as true or false.  For example, in the chart used in this problem,
@@ -25,18 +25,18 @@ var fixPrinter = function() {
 
     //enter your code here and don't forget to send the output to the DOM
 
-if (boolPrinting === true) {
+if (boolPrinting === true) { //boolPrinting = true is when the printer does NOT print
 
-    if (boolRedLight === true) {
+    if (boolRedLight === true) { //boolRedLight = true is when the red light is flashing
 
-        if (boolRecognised === true) {
+        if (boolRecognised === true) { //boolRecognised = true when the printer is NOT recognized
 
             stringOutput = stringMessage2 + stringMessage3 + stringMessage4;
 
         }
         else {
 
-            stringOutput = stringMessage4 + stringMessage5;
+            stringOutput = stringMessage4 + "\n" + stringMessage5;
 
         }
     }
@@ -44,7 +44,7 @@ if (boolPrinting === true) {
 
         if(boolRecognised === true) {
 
-            stringOutput = stringMessage1 + stringMessage2 + stringMessage3;
+            stringOutput = stringMessage1 + "\n" + stringMessage2 + "\n" + stringMessage3;
 
         }
         else {
@@ -61,7 +61,7 @@ else {
 
         if (boolRecognised === true) {
 
-            stringOutput = stringMessage3 + stringMessage4;
+            stringOutput = stringMessage3 + "\n" + stringMessage4;
 
         }
         else {
@@ -72,7 +72,7 @@ else {
     }
     else {
 
-        if(boolRecognised === true) {
+        if (boolRecognised === true) {
 
             stringOutput = stringMessage3;
 
@@ -89,7 +89,8 @@ else {
 
 $("output").value = stringOutput;
 
-}
+};
+
 window.onload = function () {
     $("troubleshoot").onclick = fixPrinter;
 };
