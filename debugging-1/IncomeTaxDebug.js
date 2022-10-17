@@ -30,23 +30,26 @@ var calculateIncome = function ()
     }
     else
     {
+    	if(floatAnnualIncome <= 30000)
     	{
-    	if (floatAnnualIncome <= 30000)
-    	{
-    		floatTaxRate = .05;
+    	    floatTaxRate = .05;
     	}
-   		if (floatAnnualIncome <= 30000 || floatAnnualIncome <= 75000)
-   		{
-   			floatTaxRate = .10;
-   		}
-   		else
-   		{
-   			floatTaxRate = .20;
-   		}
-	}
-}
+        else 
+            {
+               if (floatAnnualIncome <= 30000 || floatAnnualIncome <= 75000)
+               {
+                    floatTaxRate = .10;
+               }
+               else
+                   {
+                        floatTaxRate = .20;
+                   }
 
-	floatAnnualTax = floatAnnualIncome * (floatTaxRate/100);
+            }
+
+	}
+
+    floatAnnualTax = floatAnnualIncome * (floatTaxRate/100);
 
 	$("annualTax").value = floatAnunalTax;
 
