@@ -1,6 +1,6 @@
 var $ = function (id) {
     return document.getElementById(id);
-};
+}
 
 var fixPrinter = function() {
     var stringOutput = "";  //declares stringOutput inital value to be blank
@@ -24,7 +24,6 @@ var fixPrinter = function() {
     var boolRecognised = $("not_recognised").selected;  ////returns a value of true only when the not_recognized html id is selected from the dropdown menu
 
     //enter your code here and don't forget to send the output to the DOM
-    ​
 
 switch (true) {
 
@@ -59,13 +58,13 @@ switch (true) {
      default:
     
         stringOutput = stringMessage6;
-    
+
         break;
     }
 $("output").value = stringOutput;
 
-};
+}
 
 window.onload = function () {
     $("troubleshoot").onclick = fixPrinter;
-};
+}
