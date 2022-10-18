@@ -12,3 +12,5 @@
 <br>
 <a href = "https://nighthawk-real.github.io/cis-2013-programs/hands-on-6/">Hands-On 6</a>
 <br>
+<a href = "https://nighthawk-real.github.io/cis-2013-programs/debugging-1/">Debugging 1</a>
+<br>
