@@ -67,6 +67,18 @@ function circleCircum(floatRadius_par)
 	return floatCircum.toFixed(2);
 }
 
+var calcCirArea = function()
+{
+    var floatRadius = parsefloat($("radius").value);
+
+    alert ("The Circle's area is " + circleArea(floatRadius));
+};
+
+function circleArea () 
+{
+    var floatCircleArea = parsefloat(math.PI * math.pow(floatRadius));
+    return floatCircleArea.toFixed(2)
+}
 
 window.onload = function () 
 {
