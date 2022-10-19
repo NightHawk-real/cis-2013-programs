@@ -67,7 +67,7 @@ function circleCircum(floatRadius_par)
 	return floatCircum.toFixed(2);
 }
 
-var calcCirArea = function()
+var calcCircArea = function()
 {
     var floatRadius = parsefloat($("radius").value);
 
@@ -91,4 +91,5 @@ window.onload = function ()
     $("rect_width").focus(); // places the cursor in the first input box
     $("calc_all").onclick = do_it; // runs the do_it function when clicked
     $("calc_circle_circum").onclick = calcCircleCircum; // runs the calcCircleCircum function when clicked
+    $("calc_circle_area").onclick = calcCircArea;
 };
