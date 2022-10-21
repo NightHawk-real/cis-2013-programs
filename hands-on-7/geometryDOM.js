@@ -38,7 +38,7 @@ var calcRectArea = function()
     var floatRectHeight = parseFloat($("rect_height").value);
     var floatRectWidth = parseFloat($("rect_width").value);
 
-    alert ("The Rectangle's area is " + rectArea(floatRectHeight, floatRectWidth));
+   $("calc_rect_area").value = rectArea(floatRectHeight, floatRectWidth);
 };
 
 function rectArea(floatRectHeight_par, floatRectWidth_par)

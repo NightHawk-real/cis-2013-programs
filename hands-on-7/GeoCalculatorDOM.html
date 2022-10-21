@@ -3,7 +3,7 @@
 <head>
     <title>Geometry Calculator</title>
     <link rel="stylesheet" type="text/css" href="geometryDOM.css" />
-    <script type="text/javascript" src="geometry.js"></script>
+    <script type="text/javascript" src="geometryDOM.js"></script>
 </head>
 
 <body>
@@ -16,7 +16,18 @@
         
         <label for="rect_height">Rectangle height:</label>
         <input type="text" id="rect_height" /><br />
-        
+    
+        <input type="button"  id="calc_rect_area_button" value="Area"/>
+		<input type="button"  id="calc_rect_perim_button" value="Perimeter"/>	
+        <br />
+
+        <label for="calc_rect_area_output">Rectange Area: </label>
+        <input type="text" id="calc_rect_area_output" value="Area" disabled="disabled"/>
+
+        <label for="calc_rect_area_output">Rectange Perimeter: </label>
+        <input type="text" id="calc_rect_perim_output" value="Perimeter" disabled="disabled"/>
+        <br />
+
         <label for="tri_side1">Triangle side 1:</label>
         <input type="text" id="tri_side1" /><br />
         
@@ -29,11 +40,9 @@
         <label for="radius">Circle radius:</label>
         <input type="text" id="radius" /><br />
     
-		<fieldset>
-		<label for="calc_rect_area">Rectangle:</label>
-		<input type="button"  id="calc_rect_area" value="Area"/>
-		<input type="button"  id="calc_rect_perim" value="Perimeter"/>
-		</fieldset>		
+
+
+
 
 		<fieldset>
 		<label for="calc_tri_area">Triangle:</label>

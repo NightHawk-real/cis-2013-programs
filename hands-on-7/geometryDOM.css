@@ -29,10 +29,24 @@ label {
     float: left;
 }
 
+label[for=calc_rect_area_output] {
+    display: inline-block;
+    width: 10em;
+    padding-right: 0em;
+    text-align: center;
+}
+
 input {
     display: block;
     float: left;
     width: 100px;
+}
+
+input[type=button] {
+    display: inline-block;
+    width: 8em;
+    padding-right: 0em;
+    text-align: center;
 }
 
 #futureValue {
