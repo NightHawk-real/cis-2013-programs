@@ -23,9 +23,12 @@
 
         <label for="calc_rect_area_output">Rectange Area: </label>
         <input type="text" id="calc_rect_area_output" value="Area" disabled="disabled"/>
+        <br />
 
         <label for="calc_rect_area_output">Rectange Perimeter: </label>
         <input type="text" id="calc_rect_perim_output" value="Perimeter" disabled="disabled"/>
+        <br />
+        <br />
         <br />
 
         <label for="tri_side1">Triangle side 1:</label>
@@ -36,27 +39,36 @@
 
         <label for="tri_side3">Triangle side 3:</label>
         <input type="text" id="tri_side3" /><br />
+        
+		<input type="button"  id="calc_tri_area_button" value="Area"/>
+		<input type="button"  id="calc_tri_perim_button" value="Perimeter"/>
+        <br />
 
+        <label for="calc_tri_area_output">Triangle Area: </label>
+        <input type="text" id="calc_tri_area_output" value="Area" disabled="disabled"/>
+
+        <label for="calc_tri_perim_output">Triangle Perimeter: </label>
+        <input type="text" id="calc_tri_perim_output" value="Perimeter" disabled="disabled"/>
+        <br />
+        <br />
+        <br />
         <label for="radius">Circle radius:</label>
         <input type="text" id="radius" /><br />
-    
 
+		<input type="button" id="calc_circle_area_button" value="Area"/>
+		<input type="button" id="calc_circle_circum_button" value="Circumference"/>
+        <br />
 
+        <label for="calc_circle_area_output">Circle Area: </label>
+        <input type="text" id="calc_circle_area_output" value="Area" disabled="disabled"/>
 
-
-		<fieldset>
-		<label for="calc_tri_area">Triangle:</label>
-		<input type="button"  id="calc_tri_area" value="Area"/>
-		<input type="button"  id="calc_tri_perim" value="Perimeter"/>
-		</fieldset>		
-
-		<fieldset>
-		<label for="calc_circle_area">Circle:</label>
-		<input type="button"  id="calc_circle_area" value="Area"/>
-		<input type="button"  id="calc_circle_circum" value="Circumference"/>
-		</fieldset>		
-
-		<fieldset>
+        <label for="calc_circle_circum_output">Circle Circumference: </label>
+        <input type="text" id="calc_circle_circum_output" value="Circumference" disabled="disabled"/>
+        <br />
+        <br />
+        <br />
+        
+        <fieldset>
 		<label for="calc_all">Calculate everthing at once:</label>
 		<input type="button"  id="calc_all" value="Do it!!"/>
 		</fieldset>		

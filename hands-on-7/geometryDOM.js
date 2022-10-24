@@ -23,10 +23,12 @@ var do_it = function ()
 	var floatCircleArea;
 	var floatCircleCircum;	
 
-	alert ("The Rectangle area is " + rectArea(floatRectHeight, floatRectWidth) + " and the perimeter is " + rectPerim(floatRectHeight, floatRectWidth) + "\n\n" +
-		"The Triangle area is " + triangleArea(floatTriSide1, floatTriSide2, floatTriSide3) + " and the perimeter is " + trianglePerim(floatTriSide1, floatTriSide2, floatTriSide3) + "\n\n" +
-		"The Circle area is " + circleArea(floatRadius) + " and the circumference is " + circleCircum(floatRadius));
-
+    $("calc_rect_area_output").value = rectArea(floatRectHeight, floatRectWidth);
+    $("calc_rect_perim_output").value = rectPerim(floatRectHeight, floatRectWidth);
+    $("calc_tri_area_output").value = triangleArea(floatTriSide1, floatTriSide2, floatTriSide3);
+    $("calc_tri_perim_output").value = trianglePerim(floatTriSide1, floatTriSide2, floatTriSide3);
+    $("calc_circle_area_output").value = circleArea(floatRadius);
+    $("calc_circle_circum_output").value = circleCircum(floatRadius);
 };
 /*
 * Beginning of the Rectangle area and perimeter functions
@@ -38,7 +40,7 @@ var calcRectArea = function()
     var floatRectHeight = parseFloat($("rect_height").value);
     var floatRectWidth = parseFloat($("rect_width").value);
 
-   $("calc_rect_area").value = rectArea(floatRectHeight, floatRectWidth);
+   $("calc_rect_area_output").value = rectArea(floatRectHeight, floatRectWidth);
 };
 
 function rectArea(floatRectHeight_par, floatRectWidth_par)
@@ -52,7 +54,7 @@ var calcRectPerim = function()
     var floatRectHeight = parseFloat($("rect_height").value);
     var floatRectWidth = parseFloat($("rect_width").value);
 
-    alert ("The Rectangle's perimeter is " + rectPerim(floatRectHeight, floatRectWidth));
+    $("calc_rect_perim_output").value = rectPerim(floatRectHeight, floatRectWidth);
 };
 
 function rectPerim(floatRectHeight_par, floatRectWidth_par)
@@ -70,14 +72,14 @@ var calcTriArea = function()
     var floatTriSide2 = parseFloat($("tri_side2").value);
     var floatTriSide3 = parseFloat($("tri_side3").value);
 
-    alert ("The Triangle's area is " + triangleArea(floatTriSide1, floatTriSide2, floatTriSide3));
+    $("calc_tri_area_output").value = triangleArea(floatTriSide1, floatTriSide2, floatTriSide3);
 };
 
 function triangleArea(floatTriSide1_par, floatTriSide2_par, floatTriSide3_par)
 {
     var floatS = ((floatTriSide1_par + floatTriSide2_par + floatTriSide3_par)/2);
     var floatTriangleArea = parseFloat(Math.sqrt(floatS*(floatS - floatTriSide1_par)*(floatS - floatTriSide2_par)*(floatS - floatTriSide3_par)))
-    return floatTriangleArea.toFixed(2)
+    return floatTriangleArea.toFixed(2);
 };
 
 var calcTriPerim = function()
@@ -86,7 +88,7 @@ var calcTriPerim = function()
     var floatTriSide2 = parseFloat($("tri_side2").value);
     var floatTriSide3 = parseFloat($("tri_side3").value);
 
-    alert ("The Triangle's perimeter is " + trianglePerim(floatTriSide1, floatTriSide2, floatTriSide3));
+    $("calc_tri_perim_output").value = trianglePerim(floatTriSide1, floatTriSide2, floatTriSide3);
 };
 
 function trianglePerim(floatTriSide1_par, floatTriSide2_par, floatTriSide3_par)
@@ -102,7 +104,7 @@ var calcCircArea = function()
 {
     var floatRadius = parseFloat($("radius").value);
 
-    alert ("The Circle's area is " + circleArea(floatRadius));
+    $("calc_circle_area_output").value = circleArea(floatRadius);
 };
 
 function circleArea(floatRadius_par) 
@@ -115,7 +117,7 @@ var calcCircleCircum = function()
 {
 	var floatRadius = parseFloat($("radius").value);
 
-	alert ("The Circle circumference is " + circleCircum(floatRadius));	
+	$("calc_circle_circum_output").value = circleCircum(floatRadius);	
 };
 
 function circleCircum(floatRadius_par)
@@ -134,10 +136,10 @@ window.onload = function ()
     $("radius").value = "";
     $("rect_width").focus(); // places the cursor in the first input box
     $("calc_all").onclick = do_it; // runs the do_it function when clicked
-    $("calc_circle_circum").onclick = calcCircleCircum; // runs the calcCircleCircum function when clicked
-    $("calc_circle_area").onclick = calcCircArea;
-    $("calc_tri_area").onclick = calcTriArea;
-    $("calc_tri_perim").onclick = calcTriPerim;
-    $("calc_rect_area").onclick = calcRectArea;
-    $("calc_rect_perim").onclick = calcRectPerim;
+    $("calc_circle_circum_button").onclick = calcCircleCircum; // runs the calcCircleCircum function when clicked
+    $("calc_circle_area_button").onclick = calcCircArea;
+    $("calc_tri_area_button").onclick = calcTriArea;
+    $("calc_tri_perim_button").onclick = calcTriPerim;
+    $("calc_rect_area_button").onclick = calcRectArea;
+    $("calc_rect_perim_button").onclick = calcRectPerim;
 };
