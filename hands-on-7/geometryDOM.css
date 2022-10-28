@@ -30,18 +30,24 @@ label {
 }
 
 input {
-    display: block;
-    float: left;
     width: 100px;
 }
 
-
-input[type=button] 
+input[id=calc_rect_area_button] 
 {
-    display: inline;
-    position: 100px, 100px;
-
+    margin-left: 292px;
 }
+
+input[id=calc_tri_area_button] 
+{
+    margin-left: 292px;
+}
+
+input[id=calc_circle_area_button] 
+{
+    margin-left: 292px;
+}
+
 
 #futureValue {
     color: #000000;
