@@ -16,5 +16,5 @@
 <br>
 <a href = "https://nighthawk-real.github.io/cis-2013-programs/hands-on-7/">Hands-On 7</a>
 <br>
-<a href = "https://nighthawk-real.github.io/cis-2013-programs/FizzBuzz-Test/">Hands-On 7</a>
+<a href = "https://nighthawk-real.github.io/cis-2013-programs/FizzBuzz-Test/">FizzBuzz-Test</a>
 <br>
