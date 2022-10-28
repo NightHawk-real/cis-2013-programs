@@ -2,3 +2,5 @@
  <br>
 <a href="https://nighthawk-real.github.io/cis-2013-programs/FizzBuzz-Test/FizzBuzz.html">FizzBuzz Test</a>
 <br>
+<a href="https://nighthawk-real.github.io/cis-2013-programs/FizzBuzz-Test/FizzBuzzFor.html">FizzBuzz Test</a>
+<br>
