@@ -36,13 +36,11 @@ input {
 }
 
 
-input[type=button] {
-    display: block;
-    float: center;
-    width: 8em;
-    padding-right: 0em;
-    text-align: center;
-    margin: 50px;
+input[type=button] 
+{
+    display: inline;
+    position: 100px, 100px;
+
 }
 
 #futureValue {
