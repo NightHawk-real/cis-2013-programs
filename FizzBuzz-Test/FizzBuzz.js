@@ -6,8 +6,8 @@ var $ = function (id)
 doStuffComputer = function()
 {
 	whileFunction();
-	//forFunction();
-	//doWhileFunction();
+	forFunction();
+	doWhileFunction();
 };
 
 
@@ -42,15 +42,7 @@ function whileFunction()
 	alert(output);
 };
 
-doStuffComputer = function()
-{
-	whileFunction();
-	//forFunction();
-	//doWhileFunction();
-};
-
-
-function whileFunction()
+function doWhileFunction()
 {
     var counter = 1;
 	var output = "";	
@@ -83,20 +75,7 @@ function whileFunction()
 	alert(output);
 };
 
-var $ = function (id) 
-{
-    return document.getElementById(id);
-};
-
-doStuffComputer = function()
-{
-	whileFunction();
-	//forFunction();
-	//doWhileFunction();
-};
-
-
-function whileFunction()
+function forFunction()
 {
 	// var counter = 1;
 	var output = "";	
