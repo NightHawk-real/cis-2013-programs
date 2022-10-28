@@ -13,32 +13,34 @@ doStuffComputer = function()
 
 function whileFunction()
 {
-	// var counter = 1;
+    var counter = 1;
 	var output = "";	
 
-	for (var counter = 1; counter <= 100; counter++) 
+	do
 	{
 		if(counter % 15 === 0)
 		{
 			output = output + "FizzBuzz\n";
-            // counter++;
+            counter++;
 		}
 		else if(counter % 5 === 0)
 		{
 			output = output + "Buzz\n";
-            // counter++;
+            counter++;
 		}
 		else if(counter % 3 === 0)
 		{
 			output = output + "Fizz\n";
-            // counter++;
+            counter++;
 		}
 		else
 		{
 			output = output + counter + "\n";
-            // counter++;
+            counter++;
 		}
 	}
+    while(counter <= 100)
+    
 	alert(output);
 };
 
