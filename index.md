@@ -18,4 +18,5 @@
 <br>
 <a href = "https://nighthawk-real.github.io/cis-2013-programs/FizzBuzz-Test/">FizzBuzz-Test</a>
 <br>
-
+<a href = "https://nighthawk-real.github.io/cis-2013-programs/hands-on-8/">Hands-On 8</a>
+<br>
