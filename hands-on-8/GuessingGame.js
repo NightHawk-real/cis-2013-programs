@@ -12,10 +12,10 @@ var intMax, intMin, intRandom, intGuess, intCount;
  * number is at least 0.
 */
 
-intMin = parseInt(prompt("Please enter the minimum value of your guessing range: "));
-    while((isNaN(intMin)) || (intMin < 0))
+intMin = parseInt(prompt("Please enter the minimum value of your guessing range: ")); 
+    while((isNaN(intMin)) || (intMin < 0)) // validation that user enters a positive, numeric value for the minimum value of their guessing range
     {
-        intMin = parseInt(prompt("Incorrect value. Please enter a number that is greater than 0."));
+        intMin = parseInt(prompt("Incorrect value. Please enter a number that is greater than or equal to 0."));
     }
 
 /* the following section prompts the user to enter the high number of their guessing range
@@ -23,8 +23,8 @@ intMin = parseInt(prompt("Please enter the minimum value of your guessing range:
  * number is at least 2 more than the minimum (so that there is some guessing involved).
 */
 intMax = parseInt(prompt("Please enter the maximum value of your guessing range:"));
-    while((isNaN(intMax)) || !(intMax-intMin > 2))
-    {
+    while((isNaN(intMax)) || !(intMax-intMin >= 2))   // while the user inputs a string, or a number that is not 2 >= intMin, 
+    {                                                 // then the user will be prompted "Incorrect value. Please enter a number that is at least 2 larger than your minimum value."
        intMax = parseInt(prompt("Incorrect value. Please enter a number that is at least 2 larger than your minimum value."));
     }
 
@@ -50,23 +50,26 @@ intCount = 1;
 intGuess = parseInt(prompt("Guess a number between " + intMin + " and " + intMax));
 while(intGuess != intRandom)
     {
-        if (intGuess < intRandom)
+        if (!(isNaN(intGuess)) || (intGuess > intMin) || (intGuess < intMax))  //if statement that validates that intGuess is a number, that intGuess > intMin, intGuess < intMax
         {
-            intGuess = parseInt(prompt("Guess is too low! Guess higher."));
-            while((isNaN(intGuess)) && ((intGuess <= intMax) && (intGuess >= intMin)))
-                {
-                    intGuess = parseInt(prompt("Incorrect value. Please enter a number within your guessing range."));
-                }
-        }
-        else
-        {
-            intGuess = parseInt(prompt("Guess is too high! Guess lower."));
-            while((isNaN(intGuess)) && ((intGuess <= intMax) && (intGuess >= intMin)))
+            if (intGuess < intRandom)
             {
-                intGuess = parseInt(prompt("Incorrect value. Please enter a number within your guessing range."));
+                intGuess = parseInt(prompt("Guess is too low! Guess higher."));
+            }
+            else
+            {
+                intGuess = parseInt(prompt("Guess is too high! Guess lower."));
             }
         }
-        intCount++;
+        else  // if intGuess is not a number, or it is outside the valid previously determined range, the user will be prompted to input a correct value until they do so.
+        {
+            while((isNaN(intGuess)) || (intGuess < intMin) || (intGuess > intMax))  
+            {
+                intGuess = parseInt(prompt("Incorrect value. Please enter a number within the guessing range."));
+            }
+        }
+        intCount++; // increments every time the user makes a guess, which keeps track of the amount of guesses they have made in total
+
     }
 
 /* The following section provides the main loop and logic for the program.
@@ -77,5 +80,9 @@ while(intGuess != intRandom)
  
 
 // provides final output upon successful guessing
-alert("Congratulations!!! You guessed the correct number (" + intRandom +")\n" +
-		" and it only took you " + intCount + " attempts!");
+alert("Congratulations!!! You guessed the correct number " + intRandom +"\n" + "in " + intCount + " attempts!\nYour score: " + (101 - Math.pow(intCount, 2)));
+/* Added a score counter based out of 100 points that exponentially 
+* decreases with each additional guess. The total points are based out of
+* 101 points as intCount is set to 1, meaning that 101 - 1 = 100, resulting
+* in the maximum points possible being 100. */
+
