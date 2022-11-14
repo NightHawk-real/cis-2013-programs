@@ -10,7 +10,7 @@ var $ = function (id)
 
 var play = function()
 {
-    var intMax, intMin, intRandom, intGuess, intCount, intScore;
+    var intMax, intMin, intRandom, intGuess, intCount, intScore, intPrevious;
 
 /* the following section prompts the user to enter the low number of their guessing range
  * and then validates that the user entered an actual number and make sure that the
@@ -41,12 +41,13 @@ var play = function()
  */
 
     intRandom = parseInt(Math.floor(Math.random()*(intMax-intMin+1))+intMin);
-
+    
 
 // set the loop counter
 
     intCount = 1;
     intLimiter = ((intMax - intMin)/2);
+    intPrevious = [];
 /* the following section prompts the user to enter their guess
  * and then validates that the user entered an actual number and makes sure that the
  * number is between the allowed max and min number choices.
@@ -73,6 +74,7 @@ var play = function()
                     intGuess = parseInt(prompt("Incorrect value. Please enter a number within the guessing range."));
                 }
             }
+            intPrevious.push(intGuess);
             intCount++; // increments every time the user makes a guess, which keeps track of the amount of guesses they have made in total
 
         }
@@ -93,6 +95,7 @@ var play = function()
             alert("Congratulations!!! You guessed the correct number: " + intRandom +"\n" + "You used " + intCount + " attempts!\nYour score: " + intScore);
         }
 
+    alert("Your previous guesses: " + intPrevious)
 // provides final output upon successful guessing
 /* Added a score counter based out of 100 points that exponentially 
 * decreases with each additional guess. The total points are based out of
