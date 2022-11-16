@@ -27,10 +27,10 @@ var play = function()
  * and then validates that the user entered an actual number and make sure that the
  * number is at least 2 more than the minimum (so that there is some guessing involved).
 */
-    intMax = parseInt(prompt("Please enter the maximum value of your guessing range:"));
+    intMax = $("max_input").value;
         while((isNaN(intMax)) || !(intMax-intMin >= 2))   // while the user inputs a string, or a number that is not 2 >= intMin, 
         {                                                 // then the user will be prompted "Incorrect value. Please enter a number that is at least 2 larger than your minimum value."
-            intMax = parseInt(prompt("Incorrect value. Please enter a number that is at least 2 larger than your minimum value."));
+            $("max_valid").value = "Incorrect value. Please enter a number that is at least 2 larger than your minimum value.";
         }
 
 /*The following line of code generates the random number to be used in the guessing game.

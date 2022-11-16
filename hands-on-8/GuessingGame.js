@@ -50,7 +50,14 @@ intCount = 1;
 intGuess = parseInt(prompt("Guess a number between " + intMin + " and " + intMax));
 while(intGuess != intRandom)
     {
-        if (!(isNaN(intGuess)) || (intGuess > intMin) || (intGuess < intMax))  //if statement that validates that intGuess is a number, that intGuess > intMin, intGuess < intMax
+        if ((isNaN(intGuess)) || (intGuess < intMin) || (intGuess > intMax))  //if statement that validates that intGuess is a number, that intGuess > intMin, intGuess < intMax
+        {
+            while((isNaN(intGuess)) || (intGuess < intMin) || (intGuess > intMax))  
+            {
+                intGuess = parseInt(prompt("Incorrect value. Please enter a number within the guessing range."));
+            
+        }
+        else  // if intGuess is not a number, or it is outside the valid previously determined range, the user will be prompted to input a correct value until they do so.
         {
             if (intGuess < intRandom)
             {
@@ -58,14 +65,7 @@ while(intGuess != intRandom)
             }
             else
             {
-                intGuess = parseInt(prompt("Guess is too high! Guess lower."));
-            }
-        }
-        else  // if intGuess is not a number, or it is outside the valid previously determined range, the user will be prompted to input a correct value until they do so.
-        {
-            while((isNaN(intGuess)) || (intGuess < intMin) || (intGuess > intMax))  
-            {
-                intGuess = parseInt(prompt("Incorrect value. Please enter a number within the guessing range."));
+             intGuess = parseInt(prompt("Guess is too high! Guess lower."));
             }
         }
         intCount++; // increments every time the user makes a guess, which keeps track of the amount of guesses they have made in total
