@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<head>
+   <title>The Number Guessing Game (with input validation)</title>
+   <script src="GuessingGameDOM.js"></script>
+   <link rel="stylesheet" type="text/css" href="GuessingGameDOM.css" />
+</head>
+<body>
+   <section>
+    <h1>Number Guessing Game</h1>
+
+    <label for="min_input">Guessing Range Minimum:</label>
+    <input type="text" id="min_input" />
+    <br />
+    <p id="min_valid"></p>
+    <br />
+
+    <label for="max_input">Guessing Range Maximum:</label>
+    <input type="text" id="max_input" />
+    <br />
+    <p id ="max_valid"></p>
+    <br />
+
+    <p id="min_valid"></p>
+    <textarea rows="4" cols="75" id="output" placeholder="Previous guesses:" disabled=></textarea>
+
+    <input type="button"  id="play_button" value="Play"/>
+    <br />
+   </section>
+</body>

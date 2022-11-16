@@ -10,17 +10,17 @@ var $ = function (id)
 
 var play = function()
 {
-    var intMax, intMin, intRandom, intGuess, intCount, intScore, intPrevious;
+    var intMax, intMin, intRandom, intGuess, intCount, intScore, intPrevious, stringMinValid;
 
 /* the following section prompts the user to enter the low number of their guessing range
  * and then validates that the user entered an actual number and make sure that the
  * number is at least 0.
 */
 
-    intMin = parseInt(prompt("Please enter the minimum value of your guessing range: ")); 
-        while((isNaN(intMin)) || (intMin < 0)) // validation that user enters a positive, numeric value for the minimum value of their guessing range
+    intMin = $("min_input").value
+        if ((isNaN(intMin)) || (intMin < 0)) // validation that user enters a positive, numeric value for the minimum value of their guessing range
         {
-            intMin = parseInt(prompt("Incorrect value. Please enter a number that is greater than or equal to 0."));
+            $("min_valid").value = "Incorrect value. Please enter a number that is greater than or equal to 0.";
         }
 
 /* the following section prompts the user to enter the high number of their guessing range
