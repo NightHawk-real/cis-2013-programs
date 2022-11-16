@@ -63,11 +63,11 @@ while((intGuess != intRandom) && (intCount < intLimiter))
             {  
                 if (intGuess < intRandom)
                 {
-                    intGuess = parseInt(prompt("Guess is too low! Guess higher. " + "You have " + (intLimiter - intCount) + " guesses left."));
+                    intGuess = parseInt(prompt("Guess is too low! Guess higher. " + "You have " + (intLimiter - intCount) + " guesses left.\nPrevious Number(s) Guessed: " + intPrevious));
                 }
                 else
                 {
-                    intGuess = parseInt(prompt("Guess is too high! Guess lower. " + "You have " + (intLimiter - intCount) + " guesses left."));
+                    intGuess = parseInt(prompt("Guess is too high! Guess lower. " + "You have " + (intLimiter - intCount) + " guesses left.\nPrevious Number(s) Guessed: " + intPrevious));
                 }
             }
             else  // if intGuess is not a number, or it is outside the valid previously determined range, the user will be prompted to input a correct value until they do so.
@@ -94,7 +94,7 @@ while((intGuess != intRandom) && (intCount < intLimiter))
     }
     else 
         {
-            alert("Congratulations!!! You guessed the correct number: " + intRandom +"\n" + "You used " + intCount + " attempts!\nYour score: " + intScore);
+            alert("Congratulations!!! You guessed the correct number: " + intRandom +"\n" + "You used " + intCount + " attempts!\nYour Guesses: " + intPrevious + "\nYour score: " + intScore);
         }
 
     $("output").value = "Previous guesses: " + intPrevious;
