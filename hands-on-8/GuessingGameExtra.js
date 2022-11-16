@@ -46,8 +46,8 @@ var play = function()
 // set the loop counter
 
     intCount = 1;
-    intLimiter = ((intMax - intMin)/2);
-    intPrevious = [];
+    intLimiter = ((intMax - intMin)/2); //This is the function that takes the average of their selected range and sets it to their number of guesses
+    intPrevious = [];  // This is the array that tracks the user's previous guesses 
 /* the following section prompts the user to enter their guess
  * and then validates that the user entered an actual number and makes sure that the
  * number is between the allowed max and min number choices.
@@ -64,11 +64,11 @@ while((intGuess != intRandom) && (intCount < intLimiter))
                 if (intGuess < intRandom)
                 {
                     intGuess = parseInt(prompt("Guess is too low! Guess higher. " + "You have " + (intLimiter - intCount) + " guesses left.\nPrevious Number(s) Guessed: " + intPrevious));
-                }
+                } // line above gives a prompt that tells them their guess was too high, how many guesses they have left, and what their previous guesses were.
                 else
                 {
                     intGuess = parseInt(prompt("Guess is too high! Guess lower. " + "You have " + (intLimiter - intCount) + " guesses left.\nPrevious Number(s) Guessed: " + intPrevious));
-                }
+                } 
             }
             else  // if intGuess is not a number, or it is outside the valid previously determined range, the user will be prompted to input a correct value until they do so.
             {
@@ -78,7 +78,7 @@ while((intGuess != intRandom) && (intCount < intLimiter))
                 }
             }
             intCount++; // increments every time the user makes a guess, which keeps track of the amount of guesses they have made in total
-            intPrevious.push(intGuess);
+            intPrevious.push(intGuess); // pushes their previous guesses to record them
         }
         }
 /* The following section provides the main loop and logic for the program.
@@ -86,18 +86,18 @@ while((intGuess != intRandom) && (intCount < intLimiter))
  * is given based upon whether the guess is higher or lower. The loop exits when
  * the user chooses the correct number. Each time through the loop updates the loop counter.
  */
-    intScore = (101 - Math.pow(intCount, 2));
+    intScore = (101 - Math.pow(intCount, 2)); // Score function based on 2^intCount, exponentially decreases the more guesses they use.
 
     if ((intGuess != intRandom) && (intCount === intLimiter))
     {
-        alert("Out of guessess! The number was: " + intRandom + " \nYou used " + intCount + " attempts.");
+        alert("Out of guessess! The number was: " + intRandom + " \nYou used " + intCount + " attempts.\nYour Guesses: " + intPrevious);
     }
     else 
         {
             alert("Congratulations!!! You guessed the correct number: " + intRandom +"\n" + "You used " + intCount + " attempts!\nYour Guesses: " + intPrevious + "\nYour score: " + intScore);
-        }
+        }// Congratulates the user for winning, shows them what the correct number was, how many attempts they used, what their previous guesses were, and their score
 
-    $("output").value = "Previous guesses: " + intPrevious;
+    $("output").value = "Previous guesses: " + intPrevious; // outputs to the textbox what their previous guesses were during their game.
 // provides final output upon successful guessing
 /* Added a score counter based out of 100 points that exponentially 
 * decreases with each additional guess. The total points are based out of
@@ -110,6 +110,25 @@ window.onload = function ()
 {
     $("play_button").onclick = play; 
 }
+
+/*Features actually added:
+* Main Menu, sort of
+*       Play button which creates a sort of main menu
+* Limited number of attempts
+* Records and displays previous attempts
+* Displays decreasing number of attempts
+* Score based out of 100 that decreases exponentially by 2^intCount
+* Background and some text changed
+* Validation for all inputs (Although I think the validation is bugged/broken when you first type a number outside of the range. It says
+*   too high or too low, rather than saying Incorrect value. However, if you type a string first instead of an integer, it then will recognize
+*   that numbers outside of the range afterwards are incorrect values after the first incorrect value message displayed when the
+*   string is incorrectly input.)
+* Displays guesses of previous game in the textarea on the main menu
+*/
+
+
+
+
 
 /* Future Features:
 * Main Menu
